@@ -3,7 +3,7 @@
 - The **stacking context** is a three dimensional conceptualization of HTML elements along an imaginary z-axis relative to the user.
 - A **stacking context** is formed by any element in the following scenarios:
   - Root element of document(HTML).
-  - Element with a `position` value either "absolute or "relative" and `z-index` value other than ""auto".
+  - Element with a `position` value either "absolute" or "relative" and `z-index` value other than "auto".
   - Element with a `position` value "fixed" or "sitcky".
   - Element that is a child of a `flex` container, with `z-index` value other than "auto".
   - Element with a `opacity` value less than 1.
@@ -20,6 +20,8 @@
 - Elements that do not create their own stacking contexts are assimilated by the parent stacking context.
 - Every stacking context has a single HTML element as its root element.
 - When a new stacking context is formed on an element, that stacking context confined all of its child elements to a particular place in the stacking order, which means if an element is contained in a stacking context at the bottom of the stacking order, there is no way to get it to appear in front of another element in a different stacking context that is higher in the stacking order.
+
+
 
 
 
@@ -66,7 +68,7 @@ DOM structure:
 
 - The `z-index` property can be specified with an integer value(positive, zero, or negative), which represents the position of the element along the z-axis. 
 - When no `z-index` property is specified, elements are rendered on the default rendering layer 0.
-- If several elements share the same `z-index` value(i.e., they are placed on the same layer), [stacking rules](#stacking-without-the-zindex-property) apply.
+- If several elements share the same `z-index` value(i.e., they are placed on the same layer), [stacking rules](#stacking-without-the-z-index-property) apply.
 - `z-index` works ONLY on the *positioned* elements.
 
 
@@ -87,4 +89,3 @@ From back to front:
 
 - [The Stacking Context](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Positioning/Understanding_z_index/The_stacking_context)
 - [What No One Told You About Z-Index](https://philipwalton.com/articles/what-no-one-told-you-about-z-index/)
-
